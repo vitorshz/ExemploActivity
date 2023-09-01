@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroAlunoActivity"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Matrícula"
+        android:textSize="25sp"
+        />
+    <EditText
+        android:id="@+id/edMatriculaProf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Informe a Matrícula do Professor"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome:"
+        android:textSize="25sp"/>
+    <EditText
+        android:id="@+id/edNomeProf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Informe o Nome do Professor"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CPF:"
+        android:textSize="25sp"/>
+    <EditText
+        android:id="@+id/edCpfProf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Informe o CPF do Professor"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data de Nascimento:"
+        android:textSize="25sp"/>
+    <EditText
+        android:id="@+id/edDataNascProf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Informe a Data de Nascimento do Professor"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data de Admissão"
+        android:textSize="25sp"/>
+    <EditText
+        android:id="@+id/edAdmissão"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Informe a Data de admissão do Professor"
+        android:layout_marginBottom="10dp"/>
+    <Button
+        android:id="@+id/btSalvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        android:layout_margin="10dp"
+        />
+
+
+    <TextView
+        android:id="@+id/tvProfsCadastrados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="10dp"/>
+</LinearLayout>
