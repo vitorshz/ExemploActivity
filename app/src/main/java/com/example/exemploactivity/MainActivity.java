@@ -14,7 +14,7 @@ import com.example.exemploactivity.modelo.Aluno;
 public class MainActivity extends AppCompatActivity {
 
     private Button btCadastrarAluno;
-
+    private Button btCadastroProf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btCadastrarAluno = findViewById(R.id.btCadastroAluno);
+        btCadastroProf = findViewById(R.id.btCadastroProf);
 
         btCadastrarAluno.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,14 +30,21 @@ public class MainActivity extends AppCompatActivity {
                 abrirCadastroAluno();
             }
         });
+        btCadastroProf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                abrirCadastroProf();
+            }
+        });
     }
-
-    /**
-     * método para abrir uma nova activity
-     */
     private void abrirCadastroAluno() {
         Intent intent = new Intent(MainActivity.this,
                 CadastroAlunoActivity.class);
         startActivity(intent);
+    }
+    private void abrirCadastroProf(){
+        Intent intent = new Intent(MainActivity.this, CadastroProfessorActivity.class);
+        startActivity(intent);
+
     }
 }
