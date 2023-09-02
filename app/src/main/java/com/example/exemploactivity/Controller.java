@@ -18,7 +18,6 @@ public class Controller {
     };
     private Controller(){
         listaAlunos = new ArrayList<>();
-
         listaProfs = new ArrayList<>();
     }
     public void salvarAluno(Aluno aluno){

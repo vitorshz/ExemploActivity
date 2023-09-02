@@ -33,6 +33,7 @@ public class CadastroProfessorActivity extends AppCompatActivity {
         btSalvar = findViewById(R.id.btSalvar);
         tvProfsCadastrados = findViewById(R.id.tvProfsCadastrados);
 
+        atualizarListaProfs();
         btSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,13 +71,13 @@ public class CadastroProfessorActivity extends AppCompatActivity {
             prof.setDtAdmissao(edAdmissão.getText().toString());
 
             Controller.getInstance().salvarProf(prof);
-            Toast.makeText(CadastroProfessorActivity.this, "Professor cadastrado com sucesso!", Toast.LENGTH_LONG);
+            Toast.makeText(CadastroProfessorActivity.this, "Professor cadastrado com sucesso!", Toast.LENGTH_LONG).show();
             this.finish();
         }
     private void atualizarListaProfs(){
         String texto = "";
         for (Professor prof: Controller.getInstance().retornarProfs()){
-            texto += "RA "+prof.getMatricula()+" Nome "+prof.getNome()+" Cpf "+prof.getCpf()+" Dt.Nasc. "+prof.getDtNasc()+"\n";
+            texto += "RA "+prof.getMatricula()+" Nome "+prof.getNome()+" Cpf "+prof.getCpf()+" Dt.Nasc. "+prof.getDtNasc()+" Dt.admissao. "+prof.getDtAdmissao()+"\n";
         }
         tvProfsCadastrados.setText(texto);
     }
