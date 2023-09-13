@@ -75,7 +75,8 @@ public class CadastroAlunoActivity extends AppCompatActivity {
     private void atualizarListaAlunos(){
         String texto = "";
         for (Aluno aluno: Controller.getInstance().retornarAlunos()){
-            texto += "RA "+aluno.getRa()+" Nome "+aluno.getNome()+" Cpf "+aluno.getCpf()+" Dt.Nasc. "+aluno.getDtNasc()+"\n";
+            texto += "RA "+aluno.getRa()+" Nome "+aluno.getNome()+" Cpf "+aluno.getCpf()+" Dt.Nasc. "+aluno.getDtNasc()+
+            "--------------------------------------------"+"\n";
         }
         tvAlunosCadastrados.setText(texto);
     }

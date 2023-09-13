@@ -1,29 +1,12 @@
 package com.example.exemploactivity.modelo;
 
 public class Disciplina {
-    int codDisciplina;
-    String descricao;
-    Double cargaHoraria;
-    Professor professor;
+    private String descricao;
+    private double cargaHoraria;
+    private Professor professor;
 
     public Disciplina() {
     }
-
-    public Disciplina(int codDisciplina, String descricao, Double cargaHoraria, Professor professor) {
-        this.codDisciplina = codDisciplina;
-        this.descricao = descricao;
-        this.cargaHoraria = cargaHoraria;
-        this.professor = professor;
-    }
-
-    public int getCodDisciplina() {
-        return codDisciplina;
-    }
-
-    public void setCodDisciplina(int codDisciplina) {
-        this.codDisciplina = codDisciplina;
-    }
-
     public String getDescricao() {
         return descricao;
     }
@@ -32,11 +15,11 @@ public class Disciplina {
         this.descricao = descricao;
     }
 
-    public Double getCargaHoraria() {
+    public double getCargaHoraria() {
         return cargaHoraria;
     }
 
-    public void setCargaHoraria(Double cargaHoraria) {
+    public void setCargaHoraria(double cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
     }
 

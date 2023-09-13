@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.example.exemploactivity.modelo.Aluno;
 import com.example.exemploactivity.modelo.Professor;
 
-public class CadastroProfessorActivity extends AppCompatActivity {
+public class    CadastroProfessorActivity extends AppCompatActivity {
     private EditText edMatriculaProf;
     private EditText edNomeProf;
     private EditText edCpfProf;
@@ -77,7 +77,9 @@ public class CadastroProfessorActivity extends AppCompatActivity {
     private void atualizarListaProfs(){
         String texto = "";
         for (Professor prof: Controller.getInstance().retornarProfs()){
-            texto += "RA "+prof.getMatricula()+" Nome "+prof.getNome()+" Cpf "+prof.getCpf()+" Dt.Nasc. "+prof.getDtNasc()+" Dt.admissao. "+prof.getDtAdmissao()+"\n";
+            texto += "RA "+prof.getMatricula()+" Nome "+prof.getNome()+" Cpf "+prof.getCpf()+" Dt.Nasc. "+prof.getDtNasc()+
+                    " Dt.admissao. "+prof.getDtAdmissao()+
+                    "--------------------------------------------"+"\n";
         }
         tvProfsCadastrados.setText(texto);
     }

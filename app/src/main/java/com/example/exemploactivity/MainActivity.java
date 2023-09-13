@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btCadastrarAluno;
     private Button btCadastroProf;
+    private Button btCadastroDisciplina;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         btCadastrarAluno = findViewById(R.id.btCadastroAluno);
         btCadastroProf = findViewById(R.id.btCadastroProf);
-
+        btCadastroDisciplina = findViewById(R.id.btCadastroDisciplina);
         btCadastrarAluno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
                 abrirCadastroProf();
             }
         });
+        btCadastroDisciplina.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                abrirCadastroDisciplina();
+            }
+        });
     }
     private void abrirCadastroAluno() {
         Intent intent = new Intent(MainActivity.this,
@@ -44,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
     }
     private void abrirCadastroProf(){
         Intent intent = new Intent(MainActivity.this, CadastroProfessorActivity.class);
+        startActivity(intent);
+
+    }
+    private void abrirCadastroDisciplina(){
+        Intent intent = new Intent(MainActivity.this, CadastroDisciplinaActivity.class);
         startActivity(intent);
 
     }

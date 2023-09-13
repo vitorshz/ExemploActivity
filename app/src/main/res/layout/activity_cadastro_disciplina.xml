@@ -12,72 +12,69 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Matrícula"
-        android:textSize="25sp"
-        />
+        android:text="Descrição"
+        android:textSize="25sp"/>
     <EditText
-        android:id="@+id/edMatriculaProf"
+        android:id="@+id/edDescDisciplina"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Informe a Matrícula do Professor"
+        android:hint="Informe a descrição da disciplina"
         android:layout_marginBottom="10dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nome:"
+        android:text="Carga horária:"
         android:textSize="25sp"/>
     <EditText
-        android:id="@+id/edNomeProf"
+        android:id="@+id/edCargaHoraria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Informe o Nome do Professor"
+        android:inputType="numberDecimal"
+        android:hint="Informe a carga horária"
         android:layout_marginBottom="10dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CPF:"
+        android:text="Professor:"
         android:textSize="25sp"/>
-    <EditText
-        android:id="@+id/edCpfProf"
+    <Spinner
+        android:id="@+id/spProfessor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Informe o CPF do Professor"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="10dp"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Data de Nascimento:"
-        android:textSize="25sp"/>
-    <EditText
-        android:id="@+id/edDataNascProf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Informe a Data de Nascimento do Professor"
-        android:layout_marginBottom="10dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Data de Admissão"
-        android:textSize="25sp"/>
-    <EditText
-        android:id="@+id/edAdmissão"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Informe a Data de admissão do Professor"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="10dp"
+        android:text="O professor deve ser selecionado!"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_gravity="right"
+        android:id="@+id/tvErroProfessor"
+        android:visibility="gone"/>
     <Button
         android:id="@+id/btSalvar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Salvar"
-        android:layout_margin="10dp"
-        />
-
-
-    <TextView
-        android:id="@+id/tvProfsCadastrados"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
         android:layout_margin="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                android:id="@+id/tvListaDisciplina"/>
+
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
