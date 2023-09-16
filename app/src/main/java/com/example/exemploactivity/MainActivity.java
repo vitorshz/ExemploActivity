@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btCadastrarAluno;
     private Button btCadastroProf;
     private Button btCadastroDisciplina;
-
+    private Button btCadastroTurma;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,38 +25,37 @@ public class MainActivity extends AppCompatActivity {
         btCadastrarAluno = findViewById(R.id.btCadastroAluno);
         btCadastroProf = findViewById(R.id.btCadastroProf);
         btCadastroDisciplina = findViewById(R.id.btCadastroDisciplina);
+        btCadastroTurma = findViewById(R.id.btCadastroTurma);
         btCadastrarAluno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                abrirCadastroAluno();
+                abrirActivity(CadastroAlunoActivity.class);
             }
         });
         btCadastroProf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                abrirCadastroProf();
+                abrirActivity(CadastroProfessorActivity.class);
             }
         });
         btCadastroDisciplina.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                abrirCadastroDisciplina();
+                abrirActivity(CadastroDisciplinaActivity.class);
             }
         });
-    }
-    private void abrirCadastroAluno() {
-        Intent intent = new Intent(MainActivity.this,
-                CadastroAlunoActivity.class);
-        startActivity(intent);
-    }
-    private void abrirCadastroProf(){
-        Intent intent = new Intent(MainActivity.this, CadastroProfessorActivity.class);
-        startActivity(intent);
+        btCadastroTurma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                abrirActivity(CadastroTurmaActivity.class);
+            }
+        });
 
     }
-    private void abrirCadastroDisciplina(){
-        Intent intent = new Intent(MainActivity.this, CadastroDisciplinaActivity.class);
-        startActivity(intent);
 
+    private void abrirActivity(Class<?> activity) {
+        Intent intent = new Intent(MainActivity.this, activity);
+        startActivity(intent);
     }
+
 }
